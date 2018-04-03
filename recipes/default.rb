@@ -18,7 +18,7 @@
 #
 
 include_recipe 'build-essential'
-include_recipe 'python'
+include_recipe 'poise-python'
 include_recipe 'runit'
 
 user node['celery-flower']['user'] do
