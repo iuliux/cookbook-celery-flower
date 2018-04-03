@@ -14,13 +14,5 @@ cookbook 'python',
   :git => 'git://github.com/poise/python.git',
   :branch => 'master'
 
-cookbook 'apache2',
-  :git => 'git://github.com/onehealth-cookbooks/apache2.git',
-  :branch => 'master'
-
-cookbook 'poise-proxy',
-  :git => 'git://github.com/poise/poise-proxy.git',
-  :branch => 'master'
-
 cookbook 'flower-test',
   :path => 'test/cookbooks/flower-test'
