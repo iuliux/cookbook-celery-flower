@@ -5,7 +5,7 @@ default['celery-flower']['version'] = '0.7.0'
 # Make virtualenv path unique if installing multiple instance
 # such as the name of the rabbitmq vhosts
 # eg; '/opt/celery_flower_testing'
-default['celery-flower']['virtualenv'] = '/opt/celery_flower'
+default['celery-flower']['virtualenv'] = 'flower-virtualenv'
 
 # Override log file if multiple instance are created
 # eg; /var/log/celery-flower/celery-flower_5555.log
