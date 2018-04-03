@@ -41,7 +41,7 @@ case node['platform']
     end
 end
 
-python_virtualenv 'flower-virtualenv' do
+python_virtualenv node['celery-flower']['virtualenv'] do
   user node['celery-flower']['user']
   group node['celery-flower']['group']
   path node['celery-flower']['virtualenv']
@@ -51,7 +51,7 @@ end
 #FIXME: pip install pyopenssl breaks in rhel platform
 %w{ requests pyopenssl flower}.each do |pip_pkg|
   python_package pip_pkg do
-    virtualenv 'flower-virtualenv'
+    virtualenv node['celery-flower']['virtualenv']
     action :install
     not_if { ::File.exists?("#{node['celery-flower']['virtualenv']}/bin/flower") }
   end
