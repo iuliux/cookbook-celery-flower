@@ -26,4 +26,3 @@ rabbitmq_plugin "rabbitmq_management_visualiser"
 node.override['celery-flower']['broker_api']['enable'] = true
 
 include_recipe 'celery-flower'
-include_recipe 'celery-flower::apache'
