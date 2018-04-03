@@ -2,7 +2,7 @@ celery-flower Cookbook
 ======================
 Installs and configures [flower](http://flower.readthedocs.org/en/latest/), a basic monitoring tool for celery clusters.
 
-NOTE: This cookbook is a modified version of [BNOTIONS's](https://github.com/BNOTIONS/cookbook-flower) cookbook. RunIT is used instead of supervisor to deamonize the process. Added [apache2](https://github.com/onehealth-cookbooks/apache2) and [Posie's proxy](https://github.com/poise/poise-proxy) cookbook as reverse proxy 
+NOTE: This cookbook is a modified version of [BNOTIONS's](https://github.com/BNOTIONS/cookbook-flower) cookbook. RunIT is used instead of supervisor to deamonize the process.
 
 Requirements
 ============
@@ -17,14 +17,13 @@ Platform
 Usage
 -----
 #### celery-flower::default
-Just include `celery-flower` in your node's `run_list` to get flower running. Add `celery-flower:apache` access it via port 80
+Just include `celery-flower` in your node's `run_list` to get flower running.
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[celery-flower]",
-    "recipe[celery-flower::apache]"
+    "recipe[celery-flower]"
   ]
 }
 ```
