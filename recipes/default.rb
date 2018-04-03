@@ -42,7 +42,7 @@ case node['platform']
 end
 
 python_virtualenv 'flower-virtualenv' do
-  owner node['celery-flower']['user']
+  user node['celery-flower']['user']
   group node['celery-flower']['group']
   path node['celery-flower']['virtualenv']
   not_if { ::File.exists?("#{node['celery-flower']['virtualenv']}/bin/pip") }
