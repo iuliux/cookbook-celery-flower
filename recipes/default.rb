@@ -50,7 +50,7 @@ end
 
 #FIXME: pip install pyopenssl breaks in rhel platform
 %w{ requests pyopenssl flower}.each do |pip_pkg|
-  python_pip pip_pkg do
+  python_package pip_pkg do
     virtualenv node['celery-flower']['virtualenv']
     action :install
     not_if { ::File.exists?("#{node['celery-flower']['virtualenv']}/bin/flower") }
