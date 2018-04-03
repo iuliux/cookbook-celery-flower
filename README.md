@@ -2,7 +2,8 @@ celery-flower Cookbook
 ======================
 Installs and configures [flower](http://flower.readthedocs.org/en/latest/), a basic monitoring tool for celery clusters.
 
-NOTE: This cookbook is a modified version of [BNOTIONS's](https://github.com/BNOTIONS/cookbook-flower) cookbook. RunIT is used instead of supervisor to deamonize the process.
+NOTE: This cookbook is a modified version of [enarciso's](https://github.com/enarciso/cookbook-celery-flower) cookbook (without the apache recipe), more **up to date** (_poise-python_ dependency instead of _python_, dropped the missing _poise-proxy_ dependency)
+
 
 Requirements
 ============
