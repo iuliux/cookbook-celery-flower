@@ -101,8 +101,8 @@ runit_service "celery-flower" do
   default_logger true
   options({
     :virtualenv => node['celery-flower']['virtualenv'],
-    :flower_cmd => flower_cmd,
-    :user => node['celery-flower']['user'],
-    :group => node['celery-flower']['group']
+    :flower_cmd => flower_cmd
+#     :user => node['celery-flower']['user'],
+#     :group => node['celery-flower']['group']
   })
 end
